@@ -26,9 +26,6 @@ namespace AppDevProject.Forms
             this.Text = "Smart Expense Tracker - Login";
 
             this.BackColor = System.Drawing.Color.FromArgb(209, 247, 209); // soft green
-
-            lblTitle.Text = "Smart Expense Tracker";
-            lblSubtitle.Text = "Please log in to continue";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
