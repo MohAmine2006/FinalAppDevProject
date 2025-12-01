@@ -24,8 +24,6 @@ namespace AppDevProject.Forms
         {
             // basic styling – you can tweak as you like
             this.Text = "Smart Expense Tracker - Login";
-            this.Width = 1000;
-            this.Height = 650;
 
             this.BackColor = System.Drawing.Color.FromArgb(209, 247, 209); // soft green
 

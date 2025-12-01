@@ -49,16 +49,16 @@
             // dgvUsers
             // 
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(62, 33);
+            this.dgvUsers.Location = new System.Drawing.Point(12, 44);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(641, 150);
+            this.dgvUsers.Size = new System.Drawing.Size(1308, 374);
             this.dgvUsers.TabIndex = 0;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(543, 240);
+            this.btnCreate.Location = new System.Drawing.Point(851, 537);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(524, 281);
+            this.btnRefresh.Location = new System.Drawing.Point(832, 578);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(94, 23);
             this.btnRefresh.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(543, 330);
+            this.btnClear.Location = new System.Drawing.Point(851, 627);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(543, 379);
+            this.btnClose.Location = new System.Drawing.Point(851, 676);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -98,35 +98,35 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(181, 228);
+            this.txtUsername.Location = new System.Drawing.Point(489, 525);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 22);
             this.txtUsername.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(181, 269);
+            this.txtPassword.Location = new System.Drawing.Point(489, 566);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 6;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(181, 309);
+            this.txtFirstName.Location = new System.Drawing.Point(489, 606);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 22);
             this.txtFirstName.TabIndex = 7;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(181, 347);
+            this.txtLastName.Location = new System.Drawing.Point(489, 644);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 22);
             this.txtLastName.TabIndex = 8;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(181, 389);
+            this.txtPhone.Location = new System.Drawing.Point(489, 686);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 22);
             this.txtPhone.TabIndex = 9;
@@ -134,7 +134,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(62, 233);
+            this.lblUsername.Location = new System.Drawing.Point(370, 530);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(87, 16);
             this.lblUsername.TabIndex = 10;
@@ -143,7 +143,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(59, 272);
+            this.lblPassword.Location = new System.Drawing.Point(367, 569);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 16);
             this.lblPassword.TabIndex = 11;
@@ -152,7 +152,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(59, 312);
+            this.lblFirstName.Location = new System.Drawing.Point(367, 609);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(88, 16);
             this.lblFirstName.TabIndex = 12;
@@ -161,7 +161,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(65, 347);
+            this.lblLastName.Location = new System.Drawing.Point(373, 644);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(83, 16);
             this.lblLastName.TabIndex = 13;
@@ -170,7 +170,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(47, 392);
+            this.lblPhone.Location = new System.Drawing.Point(355, 689);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(117, 16);
             this.lblPhone.TabIndex = 14;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1332, 803);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);

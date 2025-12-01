@@ -21,25 +21,11 @@ namespace AppDevProject.Forms
         private void SetupVisuals()
         {
             this.Text = "Smart Expense Tracker - Main Menu";
-            this.Width = 1000;
-            this.Height = 650;
+            //this.Width = 1000;
+            //this.Height = 650;
+            this.AutoScaleMode = AutoScaleMode.None;
 
             this.BackColor = System.Drawing.Color.FromArgb(233, 255, 244); // light mint
-
-            lblTitle.Text = "Smart Expense Tracker";
-            lblTitle.Font = new System.Drawing.Font("Segoe UI", 24, System.Drawing.FontStyle.Bold);
-
-            lblWelcome.Text = "Welcome to the Smart Expense Tracker.\n" +
-                              "Select the section you wish to access.";
-
-            btnUsers.Text = "User Information";
-            btnTransactions.Text = "Expense Records";
-
-            btnUsers.Width = 200;
-            btnUsers.Height = 60;
-
-            btnTransactions.Width = 200;
-            btnTransactions.Height = 60;
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
