@@ -20,6 +20,7 @@ namespace AppDevProject.Forms
             LoadUsers();
         }
 
+        // Loads all users from DB and displays them in the DataGridView
         private void LoadUsers()
         {
             using (var conn = DatabaseAccess.GetConnection())
@@ -32,11 +33,13 @@ namespace AppDevProject.Forms
             }
         }
 
+        // Reloads user records
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadUsers();
         }
 
+        // Insert new records into database
         private void btnCreate_Click(object sender, EventArgs e)
         {
             using (var conn = DatabaseAccess.GetConnection())
@@ -61,16 +64,13 @@ namespace AppDevProject.Forms
             LoadUsers();
         }
 
+        // Clear the texfields
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearFields();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        // Method for clear button
         private void ClearFields()
         {
             txtUsername.Clear();
@@ -80,9 +80,23 @@ namespace AppDevProject.Forms
             txtPhone.Clear();
         }
 
+        // Close the program
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void UserForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            // Close User Form and reopens a new Main Menu Form
+            this.Close();
+            MainMenuForm menu = new MainMenuForm();
+            menu.Show();
         }
     }
 }

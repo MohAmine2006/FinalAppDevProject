@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppDevProject.DatabaseConnector;
 using MySql.Data.MySqlClient;
@@ -22,53 +15,66 @@ namespace AppDevProject.Forms
 
         private void SetupVisuals()
         {
-            // basic styling – you can tweak as you like
             this.Text = "Smart Expense Tracker - Login";
-
-            this.BackColor = System.Drawing.Color.FromArgb(209, 247, 209); // soft green
+            this.BackColor = System.Drawing.Color.FromArgb(209, 247, 209); // light green background
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Read username and password
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
+            // hardcoded login check
             if (username == "admin" && password == "1234")
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login successful!", "Success");
 
-                // Open Main Menu Form
+                // Opens main menu 
                 MainMenuForm menu = new MainMenuForm();
                 menu.Show();
 
-                this.Hide(); // hide login screen
+                // Hides login screen
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Incorrect username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect username or password", "Error");
             }
         }
 
-        private bool ValidateLoginFromDatabase(string username, string password)
+        private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            // Simple query against your existing users table in MySQL
-            const string sql = "SELECT COUNT(*) FROM users WHERE username = @u AND password = @p";
-
-            using (var conn = DatabaseAccess.GetConnection())
-            using (var cmd = new MySqlCommand(sql, conn))
-            {
-                cmd.Parameters.AddWithValue("@u", username);
-                cmd.Parameters.AddWithValue("@p", password);
-
-                conn.Open();
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                return count > 0;
-            }
+            // open the CreateForm screen
+            CreateForm create = new CreateForm();
+            create.Show(); // open it as a normal window
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+        }
 
+        private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var changeLanguage = new ChangeLanguage();
+
+            switch (languageComboBox.SelectedIndex)
+            {
+                case 0: // English
+                    changeLanguage.UpdateConfig("Language", "en");
+                    Application.Restart();
+                    break;
+
+                case 1: // French
+                    changeLanguage.UpdateConfig("Language", "fr-CA");
+                    Application.Restart();
+                    break;
+
+                case 2: // Spanish
+                    changeLanguage.UpdateConfig("Language", "es-ES");
+                    Application.Restart();
+                    break;
+            }
         }
     }
 }
