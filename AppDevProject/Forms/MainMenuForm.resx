@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblWelcome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -186,7 +186,7 @@ Select the section you wish to access.
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblWelcome.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnUsers.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 19.8pt</value>
@@ -204,7 +204,7 @@ Select the section you wish to access.
     <value>2</value>
   </data>
   <data name="btnUsers.Text" xml:space="preserve">
-    <value>USER INFO</value>
+    <value>&amp;USER INFO</value>
   </data>
   <data name="&gt;&gt;btnUsers.Name" xml:space="preserve">
     <value>btnUsers</value>
@@ -216,7 +216,7 @@ Select the section you wish to access.
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnUsers.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnTransactions.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 19.8pt</value>
@@ -234,7 +234,7 @@ Select the section you wish to access.
     <value>3</value>
   </data>
   <data name="btnTransactions.Text" xml:space="preserve">
-    <value>EXPENSE RECORDS</value>
+    <value>&amp;EXPENSE RECORDS</value>
   </data>
   <data name="&gt;&gt;btnTransactions.Name" xml:space="preserve">
     <value>btnTransactions</value>
@@ -246,7 +246,7 @@ Select the section you wish to access.
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnTransactions.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnLogout.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
@@ -276,6 +276,33 @@ Select the section you wish to access.
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAbout.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1159, 737</value>
+  </data>
+  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 54</value>
+  </data>
+  <data name="btnAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnAbout.Text" xml:space="preserve">
+    <value>&amp;ABOUT</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
+    <value>btnAbout</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

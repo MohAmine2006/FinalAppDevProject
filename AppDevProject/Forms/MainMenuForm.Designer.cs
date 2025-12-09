@@ -34,6 +34,7 @@
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -68,10 +69,18 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnAbout
+            // 
+            resources.ApplyResources(this.btnAbout, "btnAbout");
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // MainMenuForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnTransactions);
             this.Controls.Add(this.btnUsers);
@@ -91,5 +100,6 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnTransactions;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnAbout;
     }
 }

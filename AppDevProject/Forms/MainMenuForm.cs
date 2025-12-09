@@ -52,6 +52,12 @@ namespace AppDevProject.Forms
             MessageBox.Show("You have been logged out.", "Logout");
         }
 
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Smart Expense Tracker\nVersion: 1.0.0\nAuthor: Daiyan Abrar Samin & Mohamed Amine Hamidouch", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
         }
