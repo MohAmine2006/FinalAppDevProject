@@ -117,210 +117,210 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 30pt, style=Bold</value>
+  <data name="btnUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 132</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblWelcome.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 88</value>
+  <data name="&gt;&gt;btnLogout.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>719, 58</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnTransactions.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnTransactions.Name" xml:space="preserve">
+    <value>btnTransactions</value>
   </data>
   <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblTitle.Text" xml:space="preserve">
-    <value>SMART EXPENSE TRACKER</value>
+  <data name="btnLogout.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
-    <value>lblTitle</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAbout.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnUsers.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblWelcome.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>719, 58</value>
   </data>
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="lblWelcome.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnAbout.Text" xml:space="preserve">
+    <value>&amp;ABOUT</value>
+  </data>
+  <data name="btnUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 409</value>
+  </data>
+  <data name="&gt;&gt;btnTransactions.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnTransactions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblWelcome.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblWelcome.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="lblWelcome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
   </data>
-  <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 189</value>
+  <data name="&gt;&gt;btnUsers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>545, 72</value>
   </data>
-  <data name="lblWelcome.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 88</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MainMenuForm</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnUsers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnTransactions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLogout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnTransactions.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 19.8pt</value>
+  </data>
+  <data name="btnUsers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 19.8pt</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1332, 803</value>
+  </data>
+  <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1159, 12</value>
+  </data>
+  <data name="btnUsers.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="lblWelcome.Text" xml:space="preserve">
     <value>Welcome to the Smart Expense Tracker.
 Select the section you wish to access.
 </value>
   </data>
-  <data name="&gt;&gt;lblWelcome.Name" xml:space="preserve">
-    <value>lblWelcome</value>
-  </data>
-  <data name="&gt;&gt;lblWelcome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblWelcome.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblWelcome.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnUsers.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 19.8pt</value>
-  </data>
-  <data name="btnUsers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 409</value>
-  </data>
-  <data name="btnUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 132</value>
-  </data>
-  <data name="btnUsers.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnUsers.Text" xml:space="preserve">
-    <value>&amp;USER INFO</value>
-  </data>
-  <data name="&gt;&gt;btnUsers.Name" xml:space="preserve">
-    <value>btnUsers</value>
-  </data>
-  <data name="&gt;&gt;btnUsers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnUsers.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnUsers.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnTransactions.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 19.8pt</value>
-  </data>
-  <data name="btnTransactions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnTransactions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>744, 409</value>
-  </data>
-  <data name="btnTransactions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 132</value>
-  </data>
-  <data name="btnTransactions.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnTransactions.Text" xml:space="preserve">
-    <value>&amp;EXPENSE RECORDS</value>
-  </data>
-  <data name="&gt;&gt;btnTransactions.Name" xml:space="preserve">
-    <value>btnTransactions</value>
-  </data>
-  <data name="&gt;&gt;btnTransactions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTransactions.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnTransactions.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnLogout.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
-  </data>
-  <data name="btnLogout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1159, 12</value>
-  </data>
-  <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 44</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
   <data name="btnLogout.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="btnLogout.Text" xml:space="preserve">
-    <value>LOGOUT</value>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>SMART EXPENSE TRACKER</value>
   </data>
-  <data name="&gt;&gt;btnLogout.Name" xml:space="preserve">
-    <value>btnLogout</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnAbout.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1159, 737</value>
+  <data name="btnTransactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 132</value>
   </data>
   <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 54</value>
   </data>
-  <data name="btnAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;btnLogout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnAbout.Text" xml:space="preserve">
-    <value>&amp;ABOUT</value>
+  <data name="lblWelcome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 30pt, style=Bold</value>
+  </data>
+  <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 44</value>
   </data>
   <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
     <value>btnAbout</value>
   </data>
-  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainMenuForm</value>
   </data>
-  <data name="&gt;&gt;btnAbout.Parent" xml:space="preserve">
+  <data name="btnTransactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>744, 409</value>
+  </data>
+  <data name="&gt;&gt;lblWelcome.Name" xml:space="preserve">
+    <value>lblWelcome</value>
+  </data>
+  <data name="&gt;&gt;btnUsers.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnAbout.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;btnUsers.Name" xml:space="preserve">
+    <value>btnUsers</value>
+  </data>
+  <data name="lblWelcome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnAbout.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 189</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.Name" xml:space="preserve">
+    <value>btnLogout</value>
+  </data>
+  <data name="btnTransactions.Text" xml:space="preserve">
+    <value>&amp;EXPENSE RECORDS</value>
+  </data>
+  <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1159, 737</value>
+  </data>
+  <data name="&gt;&gt;btnTransactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblWelcome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnLogout.Text" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="btnUsers.Text" xml:space="preserve">
+    <value>&amp;USER INFO</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1332, 803</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MainMenuForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainMenuForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

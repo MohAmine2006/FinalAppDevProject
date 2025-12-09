@@ -153,8 +153,17 @@ Selecciona la sección a la que deseas acceder.
   <data name="btnLogout.Text" xml:space="preserve">
     <value>CERRAR SESIÓN</value>
   </data>
+  <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1125, 729</value>
+  </data>
+  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 62</value>
+  </data>
+  <data name="btnAbout.Text" xml:space="preserve">
+    <value>ACERCA DE</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
 </root>
