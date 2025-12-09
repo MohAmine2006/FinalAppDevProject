@@ -62,8 +62,8 @@
             // 
             // btnLogout
             // 
-            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.BackColor = System.Drawing.Color.OrangeRed;
+            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);

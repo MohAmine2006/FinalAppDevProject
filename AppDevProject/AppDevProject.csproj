@@ -109,6 +109,12 @@
     <Compile Include="Forms\CreateForm.Designer.cs">
       <DependentUpon>CreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CsvUserViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CsvUserViewerForm.Designer.cs">
+      <DependentUpon>CsvUserViewerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateForm.resx">
       <DependentUpon>CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CsvUserViewerForm.es-ES.resx">
+      <DependentUpon>CsvUserViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CsvUserViewerForm.fr-CA.resx">
+      <DependentUpon>CsvUserViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CsvUserViewerForm.resx">
+      <DependentUpon>CsvUserViewerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.es-ES.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

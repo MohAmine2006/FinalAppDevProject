@@ -25,21 +25,35 @@ namespace AppDevProject.Forms
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // hardcoded login check
-            if (username == "admin" && password == "1234")
+            if (ValidateLogin(username, password))
             {
                 MessageBox.Show("Login successful!", "Success");
 
-                // Opens main menu 
+                // Open main menu
                 MainMenuForm menu = new MainMenuForm();
                 menu.Show();
-
-                // Hides login screen
-                this.Hide();
+                this.Hide(); // Hide login window
             }
             else
             {
-                MessageBox.Show("Incorrect username or password", "Error");
+                MessageBox.Show("Incorrect username or password!", "Error");
+            }
+        }
+
+        private bool ValidateLogin(string username, string password)
+        {
+            string sql = "SELECT COUNT(*) FROM users WHERE username = @u AND password = @p";
+
+            using (var conn = DatabaseAccess.GetConnection())
+            using (var cmd = new MySqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@u", username);
+                cmd.Parameters.AddWithValue("@p", password);
+
+                conn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                return count > 0; // TRUE if login exists
             }
         }
 

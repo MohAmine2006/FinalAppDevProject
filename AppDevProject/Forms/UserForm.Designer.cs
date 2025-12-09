@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -45,6 +45,13 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.txtFilter = new System.Windows.Forms.TextBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnOpenView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +62,7 @@
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowTemplate.Height = 24;
+            this.dgvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersGridView_CellClick);
             // 
             // btnCreate
             // 
@@ -63,12 +71,12 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnRefresh
+            // btnUpdate
             // 
-            resources.ApplyResources(this.btnRefresh, "btnRefresh");
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -141,10 +149,59 @@
             this.btnGoBack.UseVisualStyleBackColor = true;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblID
+            // 
+            resources.ApplyResources(this.lblID, "lblID");
+            this.lblID.Name = "lblID";
+            // 
+            // txtUserID
+            // 
+            resources.ApplyResources(this.txtUserID, "txtUserID");
+            this.txtUserID.Name = "txtUserID";
+            // 
+            // lblFilter
+            // 
+            resources.ApplyResources(this.lblFilter, "lblFilter");
+            this.lblFilter.Name = "lblFilter";
+            // 
+            // txtFilter
+            // 
+            resources.ApplyResources(this.txtFilter, "txtFilter");
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.TextChanged += new System.EventHandler(this.filterTextBox_TextChanged);
+            // 
+            // btnExport
+            // 
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.Name = "btnExport";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnOpenView
+            // 
+            resources.ApplyResources(this.btnOpenView, "btnOpenView");
+            this.btnOpenView.Name = "btnOpenView";
+            this.btnOpenView.UseVisualStyleBackColor = true;
+            this.btnOpenView.Click += new System.EventHandler(this.btnOpenViewer_Click);
+            // 
             // UserForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnOpenView);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.txtFilter);
+            this.Controls.Add(this.lblFilter);
+            this.Controls.Add(this.txtUserID);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblLastName);
@@ -158,7 +215,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dgvUsers);
             this.Name = "UserForm";
@@ -173,7 +230,7 @@
 
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtUsername;
@@ -187,5 +244,12 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtUserID;
+        private System.Windows.Forms.Label lblFilter;
+        private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnOpenView;
     }
 }
