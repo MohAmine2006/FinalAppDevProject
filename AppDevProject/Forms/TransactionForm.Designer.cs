@@ -35,39 +35,39 @@
             this.txtCategoryAdd = new System.Windows.Forms.TextBox();
             this.txtTypeAdd = new System.Windows.Forms.TextBox();
             this.txtAmountAdd = new System.Windows.Forms.TextBox();
-            this.txtDateAdd = new System.Windows.Forms.TextBox();
             this.txtNoteAdd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.btnAddExpense = new System.Windows.Forms.Button();
             this.btnDeleteExpense = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblAmo = new System.Windows.Forms.Label();
+            this.lblCat = new System.Windows.Forms.Label();
+            this.lblTy = new System.Windows.Forms.Label();
+            this.lblDa = new System.Windows.Forms.Label();
+            this.lblNo = new System.Windows.Forms.Label();
+            this.lblTransId = new System.Windows.Forms.Label();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.txtNoteEdit = new System.Windows.Forms.TextBox();
-            this.txtDateEdit = new System.Windows.Forms.TextBox();
             this.txtAmountEdit = new System.Windows.Forms.TextBox();
             this.txtTypeEdit = new System.Windows.Forms.TextBox();
             this.txtCategoryEdit = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblTransactionId = new System.Windows.Forms.Label();
             this.txtEditID = new System.Windows.Forms.TextBox();
             this.btnEditExpense = new System.Windows.Forms.Button();
+            this.dtpDateAdd = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateEdit = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.transactionsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // transactionsGrid
             // 
-            resources.ApplyResources(this.transactionsGrid, "transactionsGrid");
             this.transactionsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transactionsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.transactionsGrid, "transactionsGrid");
             this.transactionsGrid.Name = "transactionsGrid";
             this.transactionsGrid.RowTemplate.Height = 24;
             // 
@@ -95,11 +95,6 @@
             // 
             resources.ApplyResources(this.txtAmountAdd, "txtAmountAdd");
             this.txtAmountAdd.Name = "txtAmountAdd";
-            // 
-            // txtDateAdd
-            // 
-            resources.ApplyResources(this.txtDateAdd, "txtDateAdd");
-            this.txtDateAdd.Name = "txtDateAdd";
             // 
             // txtNoteAdd
             // 
@@ -132,70 +127,65 @@
             this.btnDeleteExpense.UseVisualStyleBackColor = true;
             this.btnDeleteExpense.Click += new System.EventHandler(this.btnDeleteExpense_Click);
             // 
-            // label2
+            // lblAmo
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lblAmo, "lblAmo");
+            this.lblAmo.Name = "lblAmo";
             // 
-            // label3
+            // lblCat
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.lblCat, "lblCat");
+            this.lblCat.Name = "lblCat";
             // 
-            // label4
+            // lblTy
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblTy, "lblTy");
+            this.lblTy.Name = "lblTy";
             // 
-            // label5
+            // lblDa
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.lblDa, "lblDa");
+            this.lblDa.Name = "lblDa";
             // 
-            // label6
+            // lblNo
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.lblNo, "lblNo");
+            this.lblNo.Name = "lblNo";
             // 
-            // label7
+            // lblTransId
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.lblTransId, "lblTransId");
+            this.lblTransId.Name = "lblTransId";
             // 
-            // label8
+            // lblNote
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.lblNote, "lblNote");
+            this.lblNote.Name = "lblNote";
             // 
-            // label9
+            // lblDate
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.lblDate, "lblDate");
+            this.lblDate.Name = "lblDate";
             // 
-            // label10
+            // lblType
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.lblType, "lblType");
+            this.lblType.Name = "lblType";
             // 
-            // label11
+            // lblCategory
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.lblCategory, "lblCategory");
+            this.lblCategory.Name = "lblCategory";
             // 
-            // label12
+            // lblAmount
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.lblAmount, "lblAmount");
+            this.lblAmount.Name = "lblAmount";
             // 
             // txtNoteEdit
             // 
             resources.ApplyResources(this.txtNoteEdit, "txtNoteEdit");
             this.txtNoteEdit.Name = "txtNoteEdit";
-            // 
-            // txtDateEdit
-            // 
-            resources.ApplyResources(this.txtDateEdit, "txtDateEdit");
-            this.txtDateEdit.Name = "txtDateEdit";
             // 
             // txtAmountEdit
             // 
@@ -212,10 +202,10 @@
             resources.ApplyResources(this.txtCategoryEdit, "txtCategoryEdit");
             this.txtCategoryEdit.Name = "txtCategoryEdit";
             // 
-            // label13
+            // lblTransactionId
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.lblTransactionId, "lblTransactionId");
+            this.lblTransactionId.Name = "lblTransactionId";
             // 
             // txtEditID
             // 
@@ -229,35 +219,49 @@
             this.btnEditExpense.UseVisualStyleBackColor = true;
             this.btnEditExpense.Click += new System.EventHandler(this.btnEditExpense_Click);
             // 
+            // dtpDateAdd
+            // 
+            resources.ApplyResources(this.dtpDateAdd, "dtpDateAdd");
+            this.dtpDateAdd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateAdd.Name = "dtpDateAdd";
+            this.dtpDateAdd.Value = new System.DateTime(2025, 12, 9, 0, 0, 0, 0);
+            // 
+            // dtpDateEdit
+            // 
+            this.dtpDateEdit.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.dtpDateEdit, "dtpDateEdit");
+            this.dtpDateEdit.Name = "dtpDateEdit";
+            this.dtpDateEdit.Value = new System.DateTime(2025, 12, 9, 0, 0, 0, 0);
+            // 
             // TransactionForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dtpDateEdit);
+            this.Controls.Add(this.dtpDateAdd);
             this.Controls.Add(this.btnEditExpense);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblTransactionId);
             this.Controls.Add(this.txtEditID);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblNote);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblCategory);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.txtNoteEdit);
-            this.Controls.Add(this.txtDateEdit);
             this.Controls.Add(this.txtAmountEdit);
             this.Controls.Add(this.txtTypeEdit);
             this.Controls.Add(this.txtCategoryEdit);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTransId);
+            this.Controls.Add(this.lblNo);
+            this.Controls.Add(this.lblDa);
+            this.Controls.Add(this.lblTy);
+            this.Controls.Add(this.lblCat);
+            this.Controls.Add(this.lblAmo);
             this.Controls.Add(this.btnDeleteExpense);
             this.Controls.Add(this.btnAddExpense);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNoteAdd);
-            this.Controls.Add(this.txtDateAdd);
             this.Controls.Add(this.txtAmountAdd);
             this.Controls.Add(this.txtTypeAdd);
             this.Controls.Add(this.txtCategoryAdd);
@@ -280,30 +284,30 @@
         private System.Windows.Forms.TextBox txtCategoryAdd;
         private System.Windows.Forms.TextBox txtTypeAdd;
         private System.Windows.Forms.TextBox txtAmountAdd;
-        private System.Windows.Forms.TextBox txtDateAdd;
         private System.Windows.Forms.TextBox txtNoteAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Button btnAddExpense;
         private System.Windows.Forms.Button btnDeleteExpense;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblAmo;
+        private System.Windows.Forms.Label lblCat;
+        private System.Windows.Forms.Label lblTy;
+        private System.Windows.Forms.Label lblDa;
+        private System.Windows.Forms.Label lblNo;
+        private System.Windows.Forms.Label lblTransId;
+        private System.Windows.Forms.Label lblNote;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.TextBox txtNoteEdit;
-        private System.Windows.Forms.TextBox txtDateEdit;
         private System.Windows.Forms.TextBox txtAmountEdit;
         private System.Windows.Forms.TextBox txtTypeEdit;
         private System.Windows.Forms.TextBox txtCategoryEdit;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTransactionId;
         private System.Windows.Forms.TextBox txtEditID;
         private System.Windows.Forms.Button btnEditExpense;
+        private System.Windows.Forms.DateTimePicker dtpDateAdd;
+        private System.Windows.Forms.DateTimePicker dtpDateEdit;
     }
 }

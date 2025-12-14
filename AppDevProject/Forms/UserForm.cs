@@ -21,7 +21,6 @@ namespace AppDevProject.Forms
             LoadUsers();
         }
 
-        // Loads all users from DB and displays them in the DataGridView
         private void LoadUsers()
         {
             using (var conn = DatabaseAccess.GetConnection())
@@ -36,11 +35,10 @@ namespace AppDevProject.Forms
 
         private void usersGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // make sure it's not the header row
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
 
-                // Populate textboxes
                 txtUserID.Text = row.Cells["userID"].Value.ToString();
                 txtUsername.Text = row.Cells["username"].Value.ToString();
                 txtPassword.Text = row.Cells["password"].Value.ToString();
@@ -68,7 +66,7 @@ namespace AppDevProject.Forms
                 DataTable table = new DataTable();
                 adapter.Fill(table);
 
-                dgvUsers.DataSource = table; // bind to the DataGridView
+                dgvUsers.DataSource = table;
             }
         }
 
@@ -77,7 +75,6 @@ namespace AppDevProject.Forms
             FilterUsers();
         }
 
-        //Updates one user record at a time
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -109,7 +106,6 @@ namespace AppDevProject.Forms
             ClearFields();
         }
 
-        // Insert new records into database
         private void btnCreate_Click(object sender, EventArgs e)
         {
             using (var conn = DatabaseAccess.GetConnection())
@@ -134,13 +130,11 @@ namespace AppDevProject.Forms
             LoadUsers();
         }
 
-        // Clear the texfields
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearFields();
         }
 
-        // Method for clear button
         private void ClearFields()
         {
             txtUsername.Clear();
@@ -150,7 +144,6 @@ namespace AppDevProject.Forms
             txtPhone.Clear();
         }
 
-        // Close the program
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -158,13 +151,11 @@ namespace AppDevProject.Forms
 
         private void btnGoBack_Click(object sender, EventArgs e)
         {
-            // Close User Form and reopens a new Main Menu Form
             this.Close();
             MainMenuForm menu = new MainMenuForm();
             menu.Show();
         }
 
-        // Deletes a record from User table 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -201,7 +192,6 @@ namespace AppDevProject.Forms
                 {
                     using (StreamWriter sw = new StreamWriter(sfd.FileName))
                     {
-                        // Write header
                         for (int i = 0; i < dgvUsers.Columns.Count; i++)
                         {
                             sw.Write(dgvUsers.Columns[i].HeaderText);
@@ -212,7 +202,6 @@ namespace AppDevProject.Forms
                         }
                         sw.WriteLine();
 
-                        // Write rows
                         foreach (DataGridViewRow row in dgvUsers.Rows)
                         {
                             if (!row.IsNewRow)
@@ -236,9 +225,8 @@ namespace AppDevProject.Forms
 
         private void btnOpenViewer_Click(object sender, EventArgs e)
         {
-            // Create and show the CSV viewer form
             CsvUserViewerForm viewer = new CsvUserViewerForm();
-            viewer.ShowDialog();   // modal, blocks until viewer is closed 
+            viewer.ShowDialog();
         }
 
         private void UserForm_Load(object sender, EventArgs e)

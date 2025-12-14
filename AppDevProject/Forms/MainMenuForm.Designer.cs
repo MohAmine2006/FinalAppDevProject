@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.btnTransactions = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnTheme = new System.Windows.Forms.Button();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -42,52 +43,56 @@
             resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
             // 
-            // lblWelcome
-            // 
-            resources.ApplyResources(this.lblWelcome, "lblWelcome");
-            this.lblWelcome.Name = "lblWelcome";
-            // 
-            // btnUsers
-            // 
-            resources.ApplyResources(this.btnUsers, "btnUsers");
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // btnTransactions
-            // 
-            resources.ApplyResources(this.btnTransactions, "btnTransactions");
-            this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.UseVisualStyleBackColor = true;
-            this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
-            // 
             // btnLogout
             // 
-            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.BackColor = System.Drawing.Color.OrangeRed;
+            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnAbout
+            // btnTheme
             // 
-            resources.ApplyResources(this.btnAbout, "btnAbout");
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            resources.ApplyResources(this.btnTheme, "btnTheme");
+            this.btnTheme.Name = "btnTheme";
+            this.btnTheme.UseVisualStyleBackColor = true;
+            this.btnTheme.Click += new System.EventHandler(this.btnTheme_Click);
+            // 
+            // dgvUsers
+            // 
+            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvUsers, "dgvUsers");
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.RowTemplate.Height = 24;
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnView
+            // 
+            resources.ApplyResources(this.btnView, "btnView");
+            this.btnView.Name = "btnView";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
             // MainMenuForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnAbout);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.dgvUsers);
+            this.Controls.Add(this.btnTheme);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnTransactions);
-            this.Controls.Add(this.btnUsers);
-            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblTitle);
             this.Name = "MainMenuForm";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,10 +101,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnTransactions;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnTheme;
+        private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnView;
     }
 }

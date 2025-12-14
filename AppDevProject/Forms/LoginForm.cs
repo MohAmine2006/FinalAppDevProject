@@ -21,28 +21,33 @@ namespace AppDevProject.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Read username and password
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
             if (ValidateLogin(username, password))
             {
-                MessageBox.Show("Login successful!", "Success");
-
-                // Open main menu
-                MainMenuForm menu = new MainMenuForm();
-                menu.Show();
-                this.Hide(); // Hide login window
+                if (Session.Role == "user")
+                {
+                    UserMenuForm user = new UserMenuForm();
+                    user.Show();
+                    this.Hide();
+                }
+                else if (Session.Role == "admin")
+                {
+                    MainMenuForm admin = new MainMenuForm();
+                    admin.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("Incorrect username or password!", "Error");
+                MessageBox.Show("Incorrect username or password.");
             }
         }
 
         private bool ValidateLogin(string username, string password)
         {
-            string sql = "SELECT COUNT(*) FROM users WHERE username = @u AND password = @p";
+            string sql = "SELECT userID, role FROM users WHERE username=@u AND password=@p";
 
             using (var conn = DatabaseAccess.GetConnection())
             using (var cmd = new MySqlCommand(sql, conn))
@@ -51,17 +56,24 @@ namespace AppDevProject.Forms
                 cmd.Parameters.AddWithValue("@p", password);
 
                 conn.Open();
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                var reader = cmd.ExecuteReader();
 
-                return count > 0; // TRUE if login exists
+                if (reader.Read())
+                {
+                    Session.UserID = reader.GetInt32(0);
+                    Session.Username = username;
+                    Session.Role = reader.GetString(1);
+                    return true;
+                }
             }
+
+            return false;
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            // open the CreateForm screen
             CreateForm create = new CreateForm();
-            create.Show(); // open it as a normal window
+            create.Show();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -74,17 +86,17 @@ namespace AppDevProject.Forms
 
             switch (languageComboBox.SelectedIndex)
             {
-                case 0: // English
+                case 0:
                     changeLanguage.UpdateConfig("Language", "en");
                     Application.Restart();
                     break;
 
-                case 1: // French
+                case 1:
                     changeLanguage.UpdateConfig("Language", "fr-CA");
                     Application.Restart();
                     break;
 
-                case 2: // Spanish
+                case 2:
                     changeLanguage.UpdateConfig("Language", "es-ES");
                     Application.Restart();
                     break;

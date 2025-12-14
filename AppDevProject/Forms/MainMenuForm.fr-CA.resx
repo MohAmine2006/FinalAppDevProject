@@ -161,8 +161,13 @@ Sélectionnez la section à laquelle vous souhaitez accéder.</value>
   <data name="btnAbout.Text" xml:space="preserve">
     <value>À PROPOS</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="btnTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 44</value>
+  </data>
+  <data name="btnTheme.Text" xml:space="preserve">
+    <value>CHANGER DE THEME</value>
   </data>
 </root>
