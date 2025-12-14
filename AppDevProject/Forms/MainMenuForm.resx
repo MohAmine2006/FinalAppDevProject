@@ -130,10 +130,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 98</value>
+    <value>436, 122</value>
   </data>
   <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 58</value>
+    <value>633, 69</value>
   </data>
   <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -160,10 +160,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1127, 12</value>
+    <value>1268, 15</value>
+  </data>
+  <data name="btnLogout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 55</value>
+    <value>160, 69</value>
   </data>
   <data name="btnLogout.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -183,41 +186,17 @@
   <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnTheme.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
-  </data>
-  <data name="btnTheme.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 12</value>
-  </data>
-  <data name="btnTheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 55</value>
-  </data>
-  <data name="btnTheme.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnTheme.Text" xml:space="preserve">
-    <value>CHANGE THEME</value>
-  </data>
-  <data name="&gt;&gt;btnTheme.Name" xml:space="preserve">
-    <value>btnTheme</value>
-  </data>
-  <data name="&gt;&gt;btnTheme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTheme.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnTheme.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="dgvUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 208</value>
+    <value>43, 260</value>
+  </data>
+  <data name="dgvUsers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="dgvUsers.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="dgvUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1231, 383</value>
+    <value>1385, 479</value>
   </data>
   <data name="dgvUsers.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -232,16 +211,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvUsers.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 654</value>
+    <value>322, 818</value>
+  </data>
+  <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 104</value>
+    <value>284, 130</value>
   </data>
   <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -259,16 +241,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="btnView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 654</value>
+    <value>849, 818</value>
+  </data>
+  <data name="btnView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 104</value>
+    <value>284, 130</value>
   </data>
   <data name="btnView.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -286,16 +271,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnView.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxTheme.Items" xml:space="preserve">
+    <value>Light Mint</value>
+  </data>
+  <data name="comboBoxTheme.Items1" xml:space="preserve">
+    <value>Soft Aqua</value>
+  </data>
+  <data name="comboBoxTheme.Items2" xml:space="preserve">
+    <value>Sunset Peach</value>
+  </data>
+  <data name="comboBoxTheme.Items3" xml:space="preserve">
+    <value>Lavender Breeze</value>
+  </data>
+  <data name="comboBoxTheme.Items4" xml:space="preserve">
+    <value>Slate Grey</value>
+  </data>
+  <data name="comboBoxTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="comboBoxTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 28</value>
+  </data>
+  <data name="comboBoxTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTheme.Name" xml:space="preserve">
+    <value>comboBoxTheme</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTheme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTheme.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTheme.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>9, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1332, 803</value>
+    <value>1498, 1004</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>MainMenuForm</value>

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnTheme = new System.Windows.Forms.Button();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.comboBoxTheme = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,13 +50,6 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnTheme
-            // 
-            resources.ApplyResources(this.btnTheme, "btnTheme");
-            this.btnTheme.Name = "btnTheme";
-            this.btnTheme.UseVisualStyleBackColor = true;
-            this.btnTheme.Click += new System.EventHandler(this.btnTheme_Click);
             // 
             // dgvUsers
             // 
@@ -80,14 +73,27 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
+            // comboBoxTheme
+            // 
+            this.comboBoxTheme.FormattingEnabled = true;
+            this.comboBoxTheme.Items.AddRange(new object[] {
+            resources.GetString("comboBoxTheme.Items"),
+            resources.GetString("comboBoxTheme.Items1"),
+            resources.GetString("comboBoxTheme.Items2"),
+            resources.GetString("comboBoxTheme.Items3"),
+            resources.GetString("comboBoxTheme.Items4")});
+            resources.ApplyResources(this.comboBoxTheme, "comboBoxTheme");
+            this.comboBoxTheme.Name = "comboBoxTheme";
+            this.comboBoxTheme.SelectedIndexChanged += new System.EventHandler(this.comboBoxTheme_SelectedIndexChanged);
+            // 
             // MainMenuForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxTheme);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvUsers);
-            this.Controls.Add(this.btnTheme);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblTitle);
             this.Name = "MainMenuForm";
@@ -102,9 +108,9 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnTheme;
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.ComboBox comboBoxTheme;
     }
 }

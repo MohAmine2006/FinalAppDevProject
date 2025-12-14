@@ -24,24 +24,42 @@ namespace AppDevProject.Forms
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (ValidateLogin(username, password))
+            try
             {
-                if (Session.Role == "user")
+                if (ValidateLogin(username, password))
                 {
-                    UserMenuForm user = new UserMenuForm();
-                    user.Show();
+                    var role = (Session.Role ?? string.Empty).Trim();
+
+                    Form next = null;
+
+                    if (string.Equals(role, "user", StringComparison.OrdinalIgnoreCase))
+                    {
+                        next = new UserMenuForm();
+                    }
+                    else if (string.Equals(role, "admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        next = new MainMenuForm();
+                    }
+                    else
+                    {
+                        // Unknown role - fallback to user menu so app continues
+                        next = new UserMenuForm();
+                    }
+
+                    // Ensure the login form is closed when the next form is closed
+                    next.FormClosed += (s, ev) => this.Close();
+
+                    next.Show();
                     this.Hide();
                 }
-                else if (Session.Role == "admin")
+                else
                 {
-                    MainMenuForm admin = new MainMenuForm();
-                    admin.Show();
-                    this.Hide();
+                    MessageBox.Show("Incorrect username or password.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Incorrect username or password.");
+                MessageBox.Show("Login failed:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,20 +68,25 @@ namespace AppDevProject.Forms
             string sql = "SELECT userID, role FROM users WHERE username=@u AND password=@p";
 
             using (var conn = DatabaseAccess.GetConnection())
-            using (var cmd = new MySqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@u", username);
-                cmd.Parameters.AddWithValue("@p", password);
+                if (conn == null)
+                    throw new InvalidOperationException("Database connection is not available.");
 
-                conn.Open();
-                var reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (var cmd = new MySqlCommand(sql, conn))
                 {
-                    Session.UserID = reader.GetInt32(0);
-                    Session.Username = username;
-                    Session.Role = reader.GetString(1);
-                    return true;
+                    cmd.Parameters.AddWithValue("@u", username);
+                    cmd.Parameters.AddWithValue("@p", password);
+
+                    conn.Open();
+                    var reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        Session.UserID = reader.GetInt32(0);
+                        Session.Username = username;
+                        Session.Role = reader.IsDBNull(1) ? null : reader.GetString(1);
+                        return true;
+                    }
                 }
             }
 

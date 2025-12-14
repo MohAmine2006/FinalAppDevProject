@@ -95,17 +95,29 @@ namespace AppDevProject.Forms
             MessageBox.Show("You have been logged out.", "Logout");
         }
 
-        private void btnTheme_Click(object sender, EventArgs e)
+        private void comboBoxTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (isDarkTheme)
+            switch (comboBoxTheme.SelectedItem.ToString())
             {
-                this.BackColor = Color.FromArgb(233, 255, 244);
-                isDarkTheme = false;
-            }
-            else
-            {
-                this.BackColor = Color.FromArgb(200, 230, 220);
-                isDarkTheme = true;
+                case "Light Mint":
+                    this.BackColor = Color.FromArgb(233, 255, 244);
+                    break;
+
+                case "Soft Aqua":
+                    this.BackColor = Color.FromArgb(200, 230, 220);
+                    break;
+
+                case "Sunset Peach":
+                    this.BackColor = Color.FromArgb(255, 230, 220);
+                    break;
+
+                case "Lavender Breeze":
+                    this.BackColor = Color.FromArgb(230, 225, 255);
+                    break;
+
+                case "Slate Grey":
+                    this.BackColor = Color.FromArgb(220, 220, 220);
+                    break;
             }
         }
 
