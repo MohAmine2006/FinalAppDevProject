@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2025 at 04:32 AM
+-- Generation Time: Dec 15, 2025 at 02:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,7 @@ CREATE TABLE `transactions` (
   `amount` decimal(10,2) NOT NULL,
   `category` varchar(20) NOT NULL,
   `type` varchar(20) NOT NULL,
+  `userID` int(10) NOT NULL,
   `date` date NOT NULL,
   `note` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,9 +41,11 @@ CREATE TABLE `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`transactionID`, `amount`, `category`, `type`, `date`, `note`) VALUES
-(1, 62.50, 'Transport', 'STM', '2025-11-20', 'Purchase monthly metro card'),
-(106, 900.00, 'food', 'pizza', '2025-11-25', '');
+INSERT INTO `transactions` (`transactionID`, `amount`, `category`, `type`, `userID`, `date`, `note`) VALUES
+(1, 100.00, 'food', 'pizza', 5, '2025-11-20', 'yum'),
+(5, 200.00, 'food', 'burger', 6, '2025-11-23', 'yum'),
+(6, 200.00, 'entertainment', 'concert', 5, '2025-11-23', 'yum'),
+(8, 7.00, 'entartainment', 'film', 10, '2025-12-10', 'Avatar 3');
 
 -- --------------------------------------------------------
 
@@ -56,15 +59,19 @@ CREATE TABLE `users` (
   `password` varchar(25) NOT NULL,
   `firstName` varchar(40) NOT NULL,
   `lastName` varchar(40) NOT NULL,
-  `phoneNum` varchar(15) NOT NULL
+  `phoneNum` varchar(15) NOT NULL,
+  `role` varchar(10) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userID`, `username`, `password`, `firstName`, `lastName`, `phoneNum`) VALUES
-(1, 'JohnS', 'jhonny123', 'John', 'Smith', '(514) 256-1092');
+INSERT INTO `users` (`userID`, `username`, `password`, `firstName`, `lastName`, `phoneNum`, `role`) VALUES
+(5, 'scor', '123', 'mo', 'ha', '(514) 784-9483', 'USER'),
+(6, 'momo', 'mah', 'mohamed', 'amine', '(514) 574-2023', 'USER'),
+(8, 'admin', '1234', 'admin', 'admin', '(514) 111-1111', 'ADMIN'),
+(10, 'andycoo', '09876', 'Andrew', 'Cooper', '(514) 374-1823', 'USER');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +81,8 @@ INSERT INTO `users` (`userID`, `username`, `password`, `firstName`, `lastName`, 
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
-  ADD PRIMARY KEY (`transactionID`);
+  ADD PRIMARY KEY (`transactionID`),
+  ADD KEY `userIdFK` (`userID`);
 
 --
 -- Indexes for table `users`
@@ -90,13 +98,23 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transactionID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `transactionID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD CONSTRAINT `userIdFK` FOREIGN KEY (`userID`) REFERENCES `users` (`userID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
