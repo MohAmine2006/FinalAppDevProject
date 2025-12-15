@@ -1,9 +1,10 @@
-﻿using System;
+﻿using AppDevProject.DatabaseConnector;
+using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using AppDevProject.DatabaseConnector;
-using MySql.Data.MySqlClient;
 
 namespace AppDevProject.Forms
 {
@@ -85,6 +86,55 @@ namespace AppDevProject.Forms
             t.TargetUserID = userID;
             t.Show();
             this.Hide();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog()
+            {
+                Filter = "TXT files (*.txt)|*.txt",
+                FileName = "UserRecords.txt"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                    {
+                        for (int i = 0; i < dgvUsers.Columns.Count; i++)
+                        {
+                            sw.Write(dgvUsers.Columns[i].HeaderText);
+                            if (i < dgvUsers.Columns.Count - 1)
+                            {
+                                sw.Write(",");
+                            }
+                        }
+                        sw.WriteLine();
+
+                        foreach (DataGridViewRow row in dgvUsers.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                for (int i = 0; i < dgvUsers.Columns.Count; i++)
+                                {
+                                    sw.Write(row.Cells[i].Value?.ToString());
+                                    if (i < dgvUsers.Columns.Count - 1)
+                                    {
+                                        sw.Write(",");
+                                    }
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                    }
+                    MessageBox.Show("Exported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnOpenViewer_Click(object sender, EventArgs e)
+        {
+            CsvUserViewerForm viewer = new CsvUserViewerForm();
+            viewer.ShowDialog();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -35,6 +35,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.comboBoxTheme = new System.Windows.Forms.ComboBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnOpenViewer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,10 +88,26 @@
             this.comboBoxTheme.Name = "comboBoxTheme";
             this.comboBoxTheme.SelectedIndexChanged += new System.EventHandler(this.comboBoxTheme_SelectedIndexChanged);
             // 
+            // btnExport
+            // 
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.Name = "btnExport";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnOpenViewer
+            // 
+            resources.ApplyResources(this.btnOpenViewer, "btnOpenViewer");
+            this.btnOpenViewer.Name = "btnOpenViewer";
+            this.btnOpenViewer.UseVisualStyleBackColor = true;
+            this.btnOpenViewer.Click += new System.EventHandler(this.btnOpenViewer_Click);
+            // 
             // MainMenuForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnOpenViewer);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.comboBoxTheme);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnDelete);
@@ -112,5 +130,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.ComboBox comboBoxTheme;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnOpenViewer;
     }
 }
